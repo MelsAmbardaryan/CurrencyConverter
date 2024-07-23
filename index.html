@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .modal-content {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .modal-header, .modal-footer {
+            border: none;
+        }
+        .titel__content {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .course-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: #f1f3f5;
+            border-radius: 5px;
+        }
+        .course-item-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        .course-item-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-striped table-bordered">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div class="container text-center">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Open Currency Converter
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Currency Converter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <form>
+                                            <h1 class="titel__content">Currency Converter</h1>
+                                            <div class="mb-3">
+                                                <div class="course-item card card-body mb-2">
+                                                    <div class="course-item-title">USD</div>
+                                                    <div class="course-item-value" data-value="USD">--.--</div>
+                                                </div>
+                                                <div class="course-item card card-body mb-2">
+                                                    <div class="course-item-title">EUR</div>
+                                                    <div class="course-item-value" data-value="EUR">--.--</div>
+                                                </div>
+                                                <div class="course-item card card-body">
+                                                    <div class="course-item-title">AMD</div>
+                                                    <div class="course-item-value" data-value="AMD">--.--</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-3">
+                                                <div class="col">
+                                                    <label for="exampleFormControlSelect1">Give:</label>
+                                                    <select class="form-control" id="exampleFormControlSelect1" disabled></select>
+                                                </div>
+                                                <div class="col">
+                                                    <label for="select">Receive:</label>
+                                                    <select id="select" class="form-control"></select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col">
+                                                    <input id="input" type="number" class="form-control" placeholder="Amount" autofocus />
+                                                </div>
+                                                <div class="col">
+                                                    <input id="result" type="number" class="form-control" placeholder="Result" />
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
